@@ -142,7 +142,22 @@ img{
         width: 70%;
         height: 100vh;
         padding: 2rem;
+        background-color: var(--white-color);
+        transition:  .5s;
     }
-    
+}
+
+.nav_item{
+    margin-bottom: var(--mb-4);
+}
+
+.nav_logo{
+    font-weight: var(--font-semi-bold);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.nav_toggle, .nav_shop{
+    font-size: 1.3rem;
+    cursor: pointer;
 }
 
