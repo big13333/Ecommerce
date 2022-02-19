@@ -138,13 +138,14 @@ img{
     .nav_menu{
         position: fixed;
         top: var(--header-height);
-        left: 0;
+        left: -100%;
         width: 70%;
         height: 100vh;
         padding: 2rem;
         background-color: var(--white-color);
-        transition:  .5s;
+        transition: .5s;
     }
+    
 }
 
 .nav_item{
@@ -159,5 +160,9 @@ img{
 .nav_toggle, .nav_shop{
     font-size: 1.3rem;
     cursor: pointer;
+}
+
+.show{
+    left: 0;
 }
 
