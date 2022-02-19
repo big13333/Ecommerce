@@ -20,3 +20,31 @@ function linkAction(){
 }
 
 navLink.forEach(idx => idx.addEventListener('click',linkAction));
+
+
+
+const sections = document.querySelectorAll('section[id]')
+
+window.addEventListener('scroll',scrollActive());
+
+function scrollActive(){
+    const scrollY = window.pageYOffset;
+    sections.forEach(cur => {
+        const sectionHeight = cur.offsetHeight
+        const sectionTop = cur.offsetTop - 50;
+        sectionId = cur.getAttribute('id');
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav_menu a[href*='+ sectionId +']').classList.add('active');
+        }else{
+            document.querySelector('.nav_menu a[href*='+ sectionId +']').classList.remove('active');
+        }
+    })
+}
+
+
+window.onscroll = ()=>{
+    const nav = document.getElementById('header')
+    if(this.scrollY >= 200) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+}
+
+
